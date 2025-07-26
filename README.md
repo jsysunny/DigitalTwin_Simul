@@ -320,7 +320,7 @@ https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/
   
 &nbsp;
 
-## 5. 🧭 동작 흐름 요약
+## 4. 🧭 동작 흐름 요약
 <img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/53e61b53-3e89-44b5-a0b5-f56c17f2c64f" />
 
 ### Autorace Map 휴게소 흐름도 순서
@@ -410,7 +410,7 @@ https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/
 
 
 
-## 6. 💻 코드 실행 방법
+## 5. 💻 코드 실행 방법
 
 ### 🚗 전체 시뮬레이션 실행 (Auto)
 - 코드: [`turtlebot3_autorace_2020.launch.py`](https://github.com/ROBOTIS-GIT/turtlebot3_simulations/blob/master/turtlebot3_gazebo/launch/turtlebot3_autorace_2020.launch.py)
@@ -492,11 +492,11 @@ ros2 launch turtlebot3_autorace_detect detect_stop_tunnel.launch.py
 ```
 
 &nbsp;
-## 7. 📷 시연 영상 / 이미지
-> https://youtu.be/qz6bvLREzT4
+## 6. 📷 시연 영상 / 이미지
+> 
 
 &nbsp;
-## 8. 🌟 기대 효과
+## 7. 🌟 기대 효과
 ### 📌 프로젝트 기대 효과
 
 | 구분             | 효과                        | 설명                                             |
