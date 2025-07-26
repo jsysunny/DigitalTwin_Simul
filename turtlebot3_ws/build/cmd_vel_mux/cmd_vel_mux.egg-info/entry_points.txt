@@ -1,0 +1,3 @@
+[console_scripts]
+mux_node = cmd_vel_mux.mux_node:main
+

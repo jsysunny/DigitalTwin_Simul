@@ -1,0 +1,17 @@
+[2.661s] Invoking command in '/home/seoyoon/turtlebot3_ws/build/cmd_vel_mux': PYTHONPATH=/home/seoyoon/turtlebot3_ws/build/cmd_vel_mux/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/seoyoon/turtlebot3_ws/install/cmd_vel_mux/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/seoyoon/turtlebot3_ws/build/cmd_vel_mux/build --no-deps symlink_data
+[3.984s] running develop
+[4.651s] running egg_info
+[4.652s] writing cmd_vel_mux.egg-info/PKG-INFO
+[4.655s] writing dependency_links to cmd_vel_mux.egg-info/dependency_links.txt
+[4.656s] writing entry points to cmd_vel_mux.egg-info/entry_points.txt
+[4.656s] writing requirements to cmd_vel_mux.egg-info/requires.txt
+[4.656s] writing top-level names to cmd_vel_mux.egg-info/top_level.txt
+[4.656s] reading manifest file 'cmd_vel_mux.egg-info/SOURCES.txt'
+[4.665s] writing manifest file 'cmd_vel_mux.egg-info/SOURCES.txt'
+[4.673s] running build_ext
+[4.673s] Creating /home/seoyoon/turtlebot3_ws/install/cmd_vel_mux/lib/python3.10/site-packages/cmd-vel-mux.egg-link (link to .)
+[4.674s] Installing mux_node script to /home/seoyoon/turtlebot3_ws/install/cmd_vel_mux/lib/cmd_vel_mux
+[4.674s] 
+[4.674s] Installed /home/seoyoon/turtlebot3_ws/build/cmd_vel_mux
+[4.675s] running symlink_data
+[4.820s] Invoked command in '/home/seoyoon/turtlebot3_ws/build/cmd_vel_mux' returned '0': PYTHONPATH=/home/seoyoon/turtlebot3_ws/build/cmd_vel_mux/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/seoyoon/turtlebot3_ws/install/cmd_vel_mux/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/seoyoon/turtlebot3_ws/build/cmd_vel_mux/build --no-deps symlink_data

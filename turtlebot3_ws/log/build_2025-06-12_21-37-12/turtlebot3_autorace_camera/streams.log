@@ -1,0 +1,18 @@
+[1.486s] Invoking command in '/home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_camera': PYTHONPATH=/home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_camera/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_camera/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_camera/build --no-deps symlink_data
+[1.895s] running develop
+[2.116s] running egg_info
+[2.116s] writing turtlebot3_autorace_camera.egg-info/PKG-INFO
+[2.116s] writing dependency_links to turtlebot3_autorace_camera.egg-info/dependency_links.txt
+[2.116s] writing entry points to turtlebot3_autorace_camera.egg-info/entry_points.txt
+[2.116s] writing requirements to turtlebot3_autorace_camera.egg-info/requires.txt
+[2.117s] writing top-level names to turtlebot3_autorace_camera.egg-info/top_level.txt
+[2.118s] reading manifest file 'turtlebot3_autorace_camera.egg-info/SOURCES.txt'
+[2.119s] writing manifest file 'turtlebot3_autorace_camera.egg-info/SOURCES.txt'
+[2.120s] running build_ext
+[2.121s] Creating /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_camera/lib/python3.10/site-packages/turtlebot3-autorace-camera.egg-link (link to .)
+[2.122s] Installing image_compensation script to /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_camera/lib/turtlebot3_autorace_camera
+[2.122s] Installing image_projection script to /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_camera/lib/turtlebot3_autorace_camera
+[2.122s] 
+[2.122s] Installed /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_camera
+[2.122s] running symlink_data
+[2.367s] Invoked command in '/home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_camera' returned '0': PYTHONPATH=/home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_camera/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_camera/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_camera/build --no-deps symlink_data

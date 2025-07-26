@@ -1,0 +1,78 @@
+[1.261s] Invoking command in '/home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect': PYTHONPATH=/home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/build
+[1.621s] running develop
+[1.886s] Removing /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/python3.10/site-packages/turtlebot3-autorace-detect.egg-link (link to .)
+[1.931s] Invoked command in '/home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect' returned '0': PYTHONPATH=/home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/build
+[1.932s] Invoking command in '/home/seoyoon/turtlebot3_ws/src/turtlebot3_autorace/turtlebot3_autorace_detect': PYTHONPATH=/home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/turtlebot3_autorace_detect build --build-base /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/build install --record /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/install.log --single-version-externally-managed install_data --force
+[2.289s] running egg_info
+[2.293s] writing ../../../build/turtlebot3_autorace_detect/turtlebot3_autorace_detect.egg-info/PKG-INFO
+[2.293s] writing dependency_links to ../../../build/turtlebot3_autorace_detect/turtlebot3_autorace_detect.egg-info/dependency_links.txt
+[2.293s] writing entry points to ../../../build/turtlebot3_autorace_detect/turtlebot3_autorace_detect.egg-info/entry_points.txt
+[2.293s] writing requirements to ../../../build/turtlebot3_autorace_detect/turtlebot3_autorace_detect.egg-info/requires.txt
+[2.293s] writing top-level names to ../../../build/turtlebot3_autorace_detect/turtlebot3_autorace_detect.egg-info/top_level.txt
+[2.295s] reading manifest file '../../../build/turtlebot3_autorace_detect/turtlebot3_autorace_detect.egg-info/SOURCES.txt'
+[2.295s] writing manifest file '../../../build/turtlebot3_autorace_detect/turtlebot3_autorace_detect.egg-info/SOURCES.txt'
+[2.295s] running build
+[2.295s] running build_py
+[2.295s] creating /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/build
+[2.295s] creating /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/build/lib
+[2.295s] creating /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/build/lib/turtlebot3_autorace_detect
+[2.295s] copying turtlebot3_autorace_detect/detect_intersection_sign.py -> /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/build/lib/turtlebot3_autorace_detect
+[2.295s] copying turtlebot3_autorace_detect/detect_construction_sign.py -> /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/build/lib/turtlebot3_autorace_detect
+[2.295s] copying turtlebot3_autorace_detect/detect_parking_sign.py -> /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/build/lib/turtlebot3_autorace_detect
+[2.295s] copying turtlebot3_autorace_detect/detect_tunnel_sign.py -> /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/build/lib/turtlebot3_autorace_detect
+[2.295s] copying turtlebot3_autorace_detect/detect_traffic_light.py -> /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/build/lib/turtlebot3_autorace_detect
+[2.296s] copying turtlebot3_autorace_detect/detect_level_crossing_sign.py -> /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/build/lib/turtlebot3_autorace_detect
+[2.296s] copying turtlebot3_autorace_detect/detect_level_crossing.py -> /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/build/lib/turtlebot3_autorace_detect
+[2.296s] copying turtlebot3_autorace_detect/detect_lane.py -> /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/build/lib/turtlebot3_autorace_detect
+[2.296s] copying turtlebot3_autorace_detect/__init__.py -> /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/build/lib/turtlebot3_autorace_detect
+[2.296s] running install
+[2.296s] running install_lib
+[2.296s] creating /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/python3.10/site-packages/turtlebot3_autorace_detect
+[2.296s] copying /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/build/lib/turtlebot3_autorace_detect/detect_intersection_sign.py -> /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/python3.10/site-packages/turtlebot3_autorace_detect
+[2.296s] copying /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/build/lib/turtlebot3_autorace_detect/detect_construction_sign.py -> /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/python3.10/site-packages/turtlebot3_autorace_detect
+[2.296s] copying /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/build/lib/turtlebot3_autorace_detect/detect_parking_sign.py -> /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/python3.10/site-packages/turtlebot3_autorace_detect
+[2.296s] copying /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/build/lib/turtlebot3_autorace_detect/detect_tunnel_sign.py -> /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/python3.10/site-packages/turtlebot3_autorace_detect
+[2.296s] copying /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/build/lib/turtlebot3_autorace_detect/detect_traffic_light.py -> /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/python3.10/site-packages/turtlebot3_autorace_detect
+[2.297s] copying /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/build/lib/turtlebot3_autorace_detect/detect_level_crossing_sign.py -> /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/python3.10/site-packages/turtlebot3_autorace_detect
+[2.297s] copying /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/build/lib/turtlebot3_autorace_detect/detect_level_crossing.py -> /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/python3.10/site-packages/turtlebot3_autorace_detect
+[2.297s] copying /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/build/lib/turtlebot3_autorace_detect/detect_lane.py -> /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/python3.10/site-packages/turtlebot3_autorace_detect
+[2.297s] copying /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/build/lib/turtlebot3_autorace_detect/__init__.py -> /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/python3.10/site-packages/turtlebot3_autorace_detect
+[2.297s] byte-compiling /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/python3.10/site-packages/turtlebot3_autorace_detect/detect_intersection_sign.py to detect_intersection_sign.cpython-310.pyc
+[2.297s] byte-compiling /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/python3.10/site-packages/turtlebot3_autorace_detect/detect_construction_sign.py to detect_construction_sign.cpython-310.pyc
+[2.297s] byte-compiling /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/python3.10/site-packages/turtlebot3_autorace_detect/detect_parking_sign.py to detect_parking_sign.cpython-310.pyc
+[2.297s] byte-compiling /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/python3.10/site-packages/turtlebot3_autorace_detect/detect_tunnel_sign.py to detect_tunnel_sign.cpython-310.pyc
+[2.298s] byte-compiling /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/python3.10/site-packages/turtlebot3_autorace_detect/detect_traffic_light.py to detect_traffic_light.cpython-310.pyc
+[2.299s] byte-compiling /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/python3.10/site-packages/turtlebot3_autorace_detect/detect_level_crossing_sign.py to detect_level_crossing_sign.cpython-310.pyc
+[2.299s] byte-compiling /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/python3.10/site-packages/turtlebot3_autorace_detect/detect_level_crossing.py to detect_level_crossing.cpython-310.pyc
+[2.299s] byte-compiling /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/python3.10/site-packages/turtlebot3_autorace_detect/detect_lane.py to detect_lane.cpython-310.pyc
+[2.306s] byte-compiling /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/python3.10/site-packages/turtlebot3_autorace_detect/__init__.py to __init__.cpython-310.pyc
+[2.306s] running install_data
+[2.306s] copying resource/turtlebot3_autorace_detect -> /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/share/ament_index/resource_index/packages
+[2.307s] copying package.xml -> /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/share/turtlebot3_autorace_detect
+[2.307s] copying launch/detect_traffic_light.launch.py -> /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/share/turtlebot3_autorace_detect/launch
+[2.307s] copying launch/detect_sign.launch.py -> /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/share/turtlebot3_autorace_detect/launch
+[2.307s] copying launch/detect_level_crossing.launch.py -> /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/share/turtlebot3_autorace_detect/launch
+[2.307s] copying launch/detect_lane.launch.py -> /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/share/turtlebot3_autorace_detect/launch
+[2.307s] copying param/lane/lane.yaml -> /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/share/turtlebot3_autorace_detect/param/lane
+[2.307s] copying param/level/level.yaml -> /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/share/turtlebot3_autorace_detect/param/level
+[2.307s] copying param/traffic_light/traffic_light.yaml -> /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/share/turtlebot3_autorace_detect/param/traffic_light
+[2.308s] copying image/construction.png -> /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/share/turtlebot3_autorace_detect/image
+[2.308s] copying image/stop.png -> /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/share/turtlebot3_autorace_detect/image
+[2.308s] copying image/tunnel.png -> /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/share/turtlebot3_autorace_detect/image
+[2.308s] copying image/intersection.png -> /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/share/turtlebot3_autorace_detect/image
+[2.308s] copying image/parking.png -> /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/share/turtlebot3_autorace_detect/image
+[2.308s] copying image/right.png -> /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/share/turtlebot3_autorace_detect/image
+[2.308s] copying image/left.png -> /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/share/turtlebot3_autorace_detect/image
+[2.308s] running install_egg_info
+[2.310s] Copying ../../../build/turtlebot3_autorace_detect/turtlebot3_autorace_detect.egg-info to /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/python3.10/site-packages/turtlebot3_autorace_detect-1.2.2-py3.10.egg-info
+[2.311s] running install_scripts
+[2.340s] Installing detect_construction_sign script to /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/turtlebot3_autorace_detect
+[2.342s] Installing detect_intersection_sign script to /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/turtlebot3_autorace_detect
+[2.342s] Installing detect_lane script to /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/turtlebot3_autorace_detect
+[2.342s] Installing detect_level_crossing script to /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/turtlebot3_autorace_detect
+[2.342s] Installing detect_level_crossing_sign script to /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/turtlebot3_autorace_detect
+[2.342s] Installing detect_parking_sign script to /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/turtlebot3_autorace_detect
+[2.342s] Installing detect_traffic_light script to /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/turtlebot3_autorace_detect
+[2.342s] Installing detect_tunnel_sign script to /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/turtlebot3_autorace_detect
+[2.342s] writing list of installed files to '/home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/install.log'
+[2.383s] Invoked command in '/home/seoyoon/turtlebot3_ws/src/turtlebot3_autorace/turtlebot3_autorace_detect' returned '0': PYTHONPATH=/home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_detect/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/turtlebot3_autorace_detect build --build-base /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/build install --record /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_detect/install.log --single-version-externally-managed install_data --force

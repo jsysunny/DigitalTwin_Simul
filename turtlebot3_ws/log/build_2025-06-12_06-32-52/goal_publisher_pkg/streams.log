@@ -1,0 +1,17 @@
+[0.726s] Invoking command in '/home/seoyoon/turtlebot3_ws/build/goal_publisher_pkg': PYTHONPATH=/home/seoyoon/turtlebot3_ws/build/goal_publisher_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/seoyoon/turtlebot3_ws/install/goal_publisher_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/seoyoon/turtlebot3_ws/build/goal_publisher_pkg/build --no-deps symlink_data
+[0.935s] running develop
+[1.072s] running egg_info
+[1.072s] writing goal_publisher_pkg.egg-info/PKG-INFO
+[1.072s] writing dependency_links to goal_publisher_pkg.egg-info/dependency_links.txt
+[1.072s] writing entry points to goal_publisher_pkg.egg-info/entry_points.txt
+[1.072s] writing requirements to goal_publisher_pkg.egg-info/requires.txt
+[1.072s] writing top-level names to goal_publisher_pkg.egg-info/top_level.txt
+[1.074s] reading manifest file 'goal_publisher_pkg.egg-info/SOURCES.txt'
+[1.074s] writing manifest file 'goal_publisher_pkg.egg-info/SOURCES.txt'
+[1.075s] running build_ext
+[1.075s] Creating /home/seoyoon/turtlebot3_ws/install/goal_publisher_pkg/lib/python3.10/site-packages/goal-publisher-pkg.egg-link (link to .)
+[1.076s] Installing goal_publisher script to /home/seoyoon/turtlebot3_ws/install/goal_publisher_pkg/lib/goal_publisher_pkg
+[1.076s] 
+[1.076s] Installed /home/seoyoon/turtlebot3_ws/build/goal_publisher_pkg
+[1.076s] running symlink_data
+[1.098s] Invoked command in '/home/seoyoon/turtlebot3_ws/build/goal_publisher_pkg' returned '0': PYTHONPATH=/home/seoyoon/turtlebot3_ws/build/goal_publisher_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/seoyoon/turtlebot3_ws/install/goal_publisher_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/seoyoon/turtlebot3_ws/build/goal_publisher_pkg/build --no-deps symlink_data

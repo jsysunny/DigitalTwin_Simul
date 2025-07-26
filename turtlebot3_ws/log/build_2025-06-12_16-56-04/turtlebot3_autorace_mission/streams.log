@@ -1,0 +1,22 @@
+[1.448s] Invoking command in '/home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_mission': PYTHONPATH=/home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_mission/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_mission/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_mission/build --no-deps symlink_data
+[1.716s] running develop
+[1.956s] running egg_info
+[1.956s] writing turtlebot3_autorace_mission.egg-info/PKG-INFO
+[1.956s] writing dependency_links to turtlebot3_autorace_mission.egg-info/dependency_links.txt
+[1.956s] writing entry points to turtlebot3_autorace_mission.egg-info/entry_points.txt
+[1.956s] writing requirements to turtlebot3_autorace_mission.egg-info/requires.txt
+[1.957s] writing top-level names to turtlebot3_autorace_mission.egg-info/top_level.txt
+[1.959s] reading manifest file 'turtlebot3_autorace_mission.egg-info/SOURCES.txt'
+[1.961s] writing manifest file 'turtlebot3_autorace_mission.egg-info/SOURCES.txt'
+[1.963s] running build_ext
+[1.964s] Creating /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_mission/lib/python3.10/site-packages/turtlebot3-autorace-mission.egg-link (link to .)
+[1.965s] Installing avoid_construction script to /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_mission/lib/turtlebot3_autorace_mission
+[1.965s] Installing control_lane script to /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_mission/lib/turtlebot3_autorace_mission
+[1.965s] Installing control_parking script to /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_mission/lib/turtlebot3_autorace_mission
+[1.965s] Installing control_traffic_light script to /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_mission/lib/turtlebot3_autorace_mission
+[1.965s] Installing mission_tunnel script to /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_mission/lib/turtlebot3_autorace_mission
+[1.966s] 
+[1.966s] Installed /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_mission
+[1.966s] running symlink_data
+[1.966s] symbolically linking /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_mission/launch/control_traffic_light.launch.py -> /home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_mission/share/turtlebot3_autorace_mission/launch
+[2.203s] Invoked command in '/home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_mission' returned '0': PYTHONPATH=/home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_mission/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/seoyoon/turtlebot3_ws/install/turtlebot3_autorace_mission/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/seoyoon/turtlebot3_ws/build/turtlebot3_autorace_mission/build --no-deps symlink_data

@@ -1,0 +1,29 @@
+[0.518s] Invoking command in '/home/seoyoon/turtlebot3_ws/build/turtlebot3_example': AMENT_PREFIX_PATH=/home/seoyoon/turtlebot3_ws/install/turtlebot3_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/seoyoon/turtlebot3_ws/install/turtlebot3_msgs LD_LIBRARY_PATH=/home/seoyoon/turtlebot3_ws/install/turtlebot3_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/seoyoon/turtlebot3_ws/build/turtlebot3_example/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/seoyoon/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/seoyoon/turtlebot3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/seoyoon/turtlebot3_ws/build/turtlebot3_example/build --no-deps symlink_data
+[0.731s] running develop
+[0.877s] running egg_info
+[0.877s] creating turtlebot3_example.egg-info
+[0.877s] writing turtlebot3_example.egg-info/PKG-INFO
+[0.878s] writing dependency_links to turtlebot3_example.egg-info/dependency_links.txt
+[0.878s] writing entry points to turtlebot3_example.egg-info/entry_points.txt
+[0.878s] writing requirements to turtlebot3_example.egg-info/requires.txt
+[0.878s] writing top-level names to turtlebot3_example.egg-info/top_level.txt
+[0.878s] writing manifest file 'turtlebot3_example.egg-info/SOURCES.txt'
+[0.880s] reading manifest file 'turtlebot3_example.egg-info/SOURCES.txt'
+[0.881s] writing manifest file 'turtlebot3_example.egg-info/SOURCES.txt'
+[0.882s] running build_ext
+[0.882s] Creating /home/seoyoon/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3-example.egg-link (link to .)
+[0.882s] Installing turtlebot3_absolute_move script to /home/seoyoon/turtlebot3_ws/install/turtlebot3_example/lib/turtlebot3_example
+[0.883s] Installing turtlebot3_interactive_marker script to /home/seoyoon/turtlebot3_ws/install/turtlebot3_example/lib/turtlebot3_example
+[0.883s] Installing turtlebot3_obstacle_detection script to /home/seoyoon/turtlebot3_ws/install/turtlebot3_example/lib/turtlebot3_example
+[0.883s] Installing turtlebot3_patrol_client script to /home/seoyoon/turtlebot3_ws/install/turtlebot3_example/lib/turtlebot3_example
+[0.883s] Installing turtlebot3_patrol_server script to /home/seoyoon/turtlebot3_ws/install/turtlebot3_example/lib/turtlebot3_example
+[0.883s] Installing turtlebot3_relative_move script to /home/seoyoon/turtlebot3_ws/install/turtlebot3_example/lib/turtlebot3_example
+[0.883s] 
+[0.883s] Installed /home/seoyoon/turtlebot3_ws/build/turtlebot3_example
+[0.883s] running symlink_data
+[0.883s] creating /home/seoyoon/turtlebot3_ws/install/turtlebot3_example/share/ament_index
+[0.883s] creating /home/seoyoon/turtlebot3_ws/install/turtlebot3_example/share/ament_index/resource_index
+[0.884s] creating /home/seoyoon/turtlebot3_ws/install/turtlebot3_example/share/ament_index/resource_index/packages
+[0.884s] symbolically linking /home/seoyoon/turtlebot3_ws/build/turtlebot3_example/resource/turtlebot3_example -> /home/seoyoon/turtlebot3_ws/install/turtlebot3_example/share/ament_index/resource_index/packages
+[0.884s] symbolically linking /home/seoyoon/turtlebot3_ws/build/turtlebot3_example/package.xml -> /home/seoyoon/turtlebot3_ws/install/turtlebot3_example/share/turtlebot3_example
+[0.907s] Invoked command in '/home/seoyoon/turtlebot3_ws/build/turtlebot3_example' returned '0': AMENT_PREFIX_PATH=/home/seoyoon/turtlebot3_ws/install/turtlebot3_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/seoyoon/turtlebot3_ws/install/turtlebot3_msgs LD_LIBRARY_PATH=/home/seoyoon/turtlebot3_ws/install/turtlebot3_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/seoyoon/turtlebot3_ws/build/turtlebot3_example/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/seoyoon/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/seoyoon/turtlebot3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/seoyoon/turtlebot3_ws/build/turtlebot3_example/build --no-deps symlink_data

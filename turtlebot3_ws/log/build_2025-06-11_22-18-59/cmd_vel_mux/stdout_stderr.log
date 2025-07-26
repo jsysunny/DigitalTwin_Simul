@@ -1,0 +1,22 @@
+running develop
+running egg_info
+creating cmd_vel_mux.egg-info
+writing cmd_vel_mux.egg-info/PKG-INFO
+writing dependency_links to cmd_vel_mux.egg-info/dependency_links.txt
+writing entry points to cmd_vel_mux.egg-info/entry_points.txt
+writing requirements to cmd_vel_mux.egg-info/requires.txt
+writing top-level names to cmd_vel_mux.egg-info/top_level.txt
+writing manifest file 'cmd_vel_mux.egg-info/SOURCES.txt'
+reading manifest file 'cmd_vel_mux.egg-info/SOURCES.txt'
+writing manifest file 'cmd_vel_mux.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/seoyoon/turtlebot3_ws/install/cmd_vel_mux/lib/python3.10/site-packages/cmd-vel-mux.egg-link (link to .)
+Installing mux_node script to /home/seoyoon/turtlebot3_ws/install/cmd_vel_mux/lib/cmd_vel_mux
+
+Installed /home/seoyoon/turtlebot3_ws/build/cmd_vel_mux
+running symlink_data
+creating /home/seoyoon/turtlebot3_ws/install/cmd_vel_mux/share/ament_index
+creating /home/seoyoon/turtlebot3_ws/install/cmd_vel_mux/share/ament_index/resource_index
+creating /home/seoyoon/turtlebot3_ws/install/cmd_vel_mux/share/ament_index/resource_index/packages
+symbolically linking /home/seoyoon/turtlebot3_ws/build/cmd_vel_mux/resource/cmd_vel_mux -> /home/seoyoon/turtlebot3_ws/install/cmd_vel_mux/share/ament_index/resource_index/packages
+symbolically linking /home/seoyoon/turtlebot3_ws/build/cmd_vel_mux/package.xml -> /home/seoyoon/turtlebot3_ws/install/cmd_vel_mux/share/cmd_vel_mux

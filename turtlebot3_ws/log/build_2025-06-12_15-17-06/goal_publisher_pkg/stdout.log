@@ -1,0 +1,15 @@
+running develop
+running egg_info
+writing goal_publisher_pkg.egg-info/PKG-INFO
+writing dependency_links to goal_publisher_pkg.egg-info/dependency_links.txt
+writing entry points to goal_publisher_pkg.egg-info/entry_points.txt
+writing requirements to goal_publisher_pkg.egg-info/requires.txt
+writing top-level names to goal_publisher_pkg.egg-info/top_level.txt
+reading manifest file 'goal_publisher_pkg.egg-info/SOURCES.txt'
+writing manifest file 'goal_publisher_pkg.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/seoyoon/turtlebot3_ws/install/goal_publisher_pkg/lib/python3.10/site-packages/goal-publisher-pkg.egg-link (link to .)
+Installing goal_publisher script to /home/seoyoon/turtlebot3_ws/install/goal_publisher_pkg/lib/goal_publisher_pkg
+
+Installed /home/seoyoon/turtlebot3_ws/build/goal_publisher_pkg
+running symlink_data
