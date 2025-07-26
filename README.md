@@ -390,7 +390,7 @@ https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/
 &nbsp;
 
 ### Parking
-<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/b2d05606-93f5-408a-a950-ef579256b3e0" />
+<img width="300" height="500" alt="image" src="https://github.com/user-attachments/assets/b2d05606-93f5-408a-a950-ef579256b3e0" />
 
 1. **`detect_signcombine.py`**  
    → 주차 표지판 감지  
