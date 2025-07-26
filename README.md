@@ -392,12 +392,20 @@ https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/
 ### Parking
 <img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/b2d05606-93f5-408a-a950-ef579256b3e0" />
 
-1. **`detect_signcombine.py`**
-   → 터널 표지판 감지
-2. **`/tunnel/cmd_vel`로 MUX 전환**  
-3. **`detect_stop_tunnel.py`**  
-   → Twist `linear.x = 0.0`, `angular.z = 0.0` 설정  
-   → 로봇 실제 정지 수행
+1. **`detect_signcombine.py`**  
+   → 주차 표지판 감지  
+
+2. **`/parking/cmd_vel`로 MUX 전환**  
+
+3. **`detect_parking.py`**  
+   → Twist로 전진 → 좌회전 → 전진 (초기 진입)  
+   → construction sign 유무 확인  
+   → 감지 시: 전진 → 우회전 → 전진 → 후진 → 주차  
+   → 주차 완료 후: 우회전 → 전진 → 우회전 (lane 복귀)  
+
+4. **`/lane/cmd_vel`로 MUX 전환**  
+   → 차선 주행 모드 복귀
+   
 &nbsp;
 
 ### Tunnel
