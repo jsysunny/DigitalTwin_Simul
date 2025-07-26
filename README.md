@@ -390,8 +390,14 @@ https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/
 &nbsp;
 
 ### Parking
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/b2d05606-93f5-408a-a950-ef579256b3e0" />
 
-
+1. **`detect_signcombine.py`**
+   → 터널 표지판 감지
+2. **`/tunnel/cmd_vel`로 MUX 전환**  
+3. **`detect_stop_tunnel.py`**  
+   → Twist `linear.x = 0.0`, `angular.z = 0.0` 설정  
+   → 로봇 실제 정지 수행
 &nbsp;
 
 ### Tunnel
@@ -493,7 +499,7 @@ ros2 launch turtlebot3_autorace_detect detect_stop_tunnel.launch.py
 
 &nbsp;
 ## 6. 📷 시연 영상 / 이미지
-> 
+> https://youtu.be/A73iN4W6Q4w
 
 &nbsp;
 ## 7. 🌟 기대 효과
