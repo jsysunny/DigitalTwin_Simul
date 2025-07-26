@@ -194,7 +194,10 @@ https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/
 &nbsp;
 ### 🤖 FSM
 **4. 신호등 제어 (control_traffic_light.py)**
+- **목적**:  신호등 색상에 따라 차량의 속도를 동적으로 조절하고, 일정 시간이 경과하거나 조건이 충족되면 `traffic_light` 모드와 `lane` 모드로 진행
 
+- **처리 흐름**:
+  
 - `detect_traffic_light` 노드로부터 신호등 색상(`traffic_light_color`)이 감지되면  
   `lane` 모드에서 `traffic_light/cmd_vel` 모드로 전환되어 제어를 수행함
 
@@ -220,10 +223,10 @@ https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/
 &nbsp;
 ### 📷 Vision 
 **5. 표지판 인식 통합 (detect_signcombine.py)**
+- **목적**: `detect_sign_parking`, `detect_sign_construction`, `detect_sign_tunnel` 노드를 하나로 통합한 노드로
+세 가지 표지판(png 이미지)을 기준으로 현재 보고 있는 영상에서 일치 여부를 판단하여 감지된 표지판 정보를 퍼블리시하고, 시각화 결과를 전송
 
-- `detect_sign_parking`, `detect_sign_construction`, `detect_sign_tunnel` 노드를 하나로 통합한 노드
-- 세 가지 표지판(png 이미지)을 기준으로 현재 보고 있는 영상에서 일치 여부를 판단하여  
-  감지된 표지판 정보를 퍼블리시하고, 시각화 결과를 전송
+- **처리 흐름**:
 
 - 이미지 수신
   - 카메라 또는 센서로부터 입력된 이미지(`raw` 또는 `compressed`)를 수신
@@ -257,10 +260,10 @@ https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/
 &nbsp;
 ### 🤖 FSM
 **6. 주차 동작 제어 (detect_parking.py)**
+- **목적**:  주차 관련 표지판 감지 후 실제 차량의 Twist 제어를 통해 주차 및 복귀 동작을 수행하는 노드
 
-- 주차 관련 표지판 감지 후 실제 차량의 Twist 제어를 통해 주차 및 복귀 동작을 수행하는 노드
-- construction 표지판을 추가로 인식하여 특별한 주차 동작 분기 처리
-
+- **처리 흐름**:
+  
 - 주차 표지판 감지
   - `detect_signcombine` 등에서 Parking 표지판을 감지하면  
     `/parking/cmd_vel` 토픽으로 제어 mux가 전환됨
@@ -289,8 +292,9 @@ https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/
 &nbsp;
 ### 🗺️ SLAM & Navigation
 **7. 터널 구간 정지 제어 (detect_stop_tunnel.py)**
-- `tunnel` 표지판을 감지하면 차량을 완전히 정지시키는 역할을 수행하는 노드
-- TurtleBot3 기준으로 정지 동작을 실제로 수행
+- **목적**: `tunnel` 표지판을 감지하면 차량을 완전히 정지시키는 역할을 수행하는 노드
+
+- **처리 흐름**:
 
 - 터널 표지판 감지
   - `detect_signcombine` 등에서 `tunnel` 표지판을 감지하면  
@@ -298,7 +302,7 @@ https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/
 
 - 정지 동작 실행
   - `detect_stop_tunnel` 노드에서 해당 정보를 수신하면  
-    Twist 메시지를 통해 **정지 명령**을 실행함
+    Twist 메시지를 통해 정지 명령을 실행함
   
   - 속도 설정:
     - `twist.linear.x = 0.0` (선형 속도 0)
@@ -317,72 +321,90 @@ https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/
 &nbsp;
 
 ## 5. 🧭 동작 흐름 요약
-<img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/53e61b53-3e89-44b5-a0b5-f56c17f2c64f" />
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/53e61b53-3e89-44b5-a0b5-f56c17f2c64f" />
 
-Autorace Map 휴게소 흐름도 순서
-1. Default lane mode -> lane 주행 
+### Autorace Map 휴게소 흐름도 순서
+1. **Default**: 기본 `lane` 모드에서 차선 주행  
+2. **Traffic Light**:  
+   - 빨간불 → 정지  
+   - 노란불 → 천천히 주행  
+   - 초록불 → 빠르게 주행  
+3. **Parking**:  
+   - Parking sign 감지 시 → 주차 주행  
+   - Construction sign 감지 시 → 반대 방향으로 회전 + 후면 주차  
+4. **Stop Tunnel**:  
+   - Tunnel sign 앞에서 정지 동작 수행  
 
-2. traffic light -> 
-신호등 감지해서 빨간불이면 멈추고 노란색이면 천천히 주행 초록색이면 빠르게 주행 
-
-3. parking -> 
-parking sign 보면 parking 주행
-construction sign 보면 construction sign           반대편으로 틀어서 후면주차 
-
-4. stop tunnel -> tunnel sign 앞에서 정차
+&nbsp;
    
 <img width="1000" height="500" alt="image" src="https://github.com/user-attachments/assets/f8ef1d66-7cc7-40a9-8767-2c9a3ef4c493" />
 
-감지 → 명령 선택 → 제어 → 주행 실행
-1.감지 단계 (Detect)
--detect_lane.py, detect_traffic_light.py, detect_sign_combine.py
+### 감지 → 명령 선택 → 제어 → 주행 실행
 
-2.MUX 선택
--현재 모드(/mode/cmd_source)에 따라
-하나의 /cmd_vel만 선택하여 출력
+| 단계          | 설명                                                                 |
+|---------------|----------------------------------------------------------------------|
+| **1. 감지 (Detect)** | `detect_lane.py`, `detect_traffic_light.py`, `detect_sign_combine.py` |
+| **2. MUX 선택**     | `/mode/cmd_source` 기준으로 하나의 `/cmd_vel`만 선택하여 출력             |
+| **3. 제어 (Control)** | `control_lane.py`, `control_traffic_light.py`, `detect_parking.py`, `detect_stop_tunnel.py` |
+| **4. 주행 (Drive)**   | 실제 Twist 메시지를 통해 로봇이 동작 수행     
 
-3.제어 단계 (Control)
--control_lane.py, control_traffic_light.py, detect_parking.py,detect_stop_tunnel.py
-
-4.최종 주행 (Drive)
+&nbsp;
 
 ### Lane
-<img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/415d72e3-ee14-4142-9070-d785122deb37" />
+<img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/415d72e3-ee14-4142-9070-d785122deb37" />
 
-1. 카메라 영상 수신
- - /camera/image_raw 토픽으로 실시간 이미지 입력
-2. HSV 색공간 변환
- - OpenCV로 BGR 이미지를 HSV로 변환
-3. 흰색/노란색 마스킹
- - HSV 범위 내 픽셀만 필터링해 차선만 추출
-4. 곡선 피팅 및 시각화
- - 추출된 픽셀을 기반으로 곡선을 추정하고 시각화
-5. detect_lane.py 실행
- - 전체 과정을 통해 차선 정보를 처리하고 출력
-   
+1. **카메라 영상 수신**  
+   → `/camera/image_raw` 토픽으로 실시간 이미지 입력
+
+2. **HSV 색공간 변환**  
+   → OpenCV로 BGR 이미지를 HSV로 변환
+
+3. **흰색/노란색 마스킹**  
+   → HSV 범위 내 픽셀 필터링하여 차선만 추출
+
+4. **곡선 피팅 및 시각화**  
+   → 추출된 픽셀 기반으로 곡선을 추정 및 렌더링
+
+5. **`detect_lane.py` 실행**  
+   → 차선 정보 계산 및 퍼블리시
+
+&nbsp;
+
 ### Traffic light
-<img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/1db045b1-d5ca-4680-888e-1b37ebbe5020" />
+<img width="300" height="500" alt="image" src="https://github.com/user-attachments/assets/1db045b1-d5ca-4680-888e-1b37ebbe5020" />
 
-1.detect_traffic_light.launch.py
-→ 신호등 감지 노드(detect_traffic_light.py)를 실행하고, 색상 인식에 필요한 HSV 파라미터를 설정.
+1. **`detect_traffic_light.launch.py`**  
+   → 신호등 감지 노드 실행, HSV 파라미터 설정
 
-2.detect_traffic_light.py
-→ 카메라로부터 실시간 이미지를 구독하고, OpenCV로 빨간불/노란불/초록불을 감지
+2. **`detect_traffic_light.py`**  
+   → 카메라 영상 구독 및 OpenCV로 색상 감지 수행
 
-3./traffic_light_color (토픽)
-→ 신호등의 상태(예: "RED", "GREEN")가 담긴 메시지가 이 토픽을 통해 전달
+3. **`/traffic_light_color` (토픽)**  
+   → 감지된 색상 (`"RED"`, `"GREEN"` 등)을 퍼블리시
 
-4.감지된 신호등 상태에 따라 로봇의 주행 속도나 정지 여부를 결정
+4. **감지 결과에 따라 속도 제어 or 정지 동작 수행**
 
-5.control_traffic_light.launch.py
-→ 제어 노드를 실행해 실제 로봇 동작을 제어
+5. **`control_traffic_light.launch.py`**  
+   → 제어 노드 실행, 로봇 제어 명령 수행
+
+&nbsp;
 
 ### Parking
 
-### Tunnel
-<img width="127" height="155" alt="image" src="https://github.com/user-attachments/assets/e6c79840-3cf0-45bb-b9c4-92cae988033b" />
 
-<img width="985" height="841" alt="image" src="https://github.com/user-attachments/assets/0a2c3b3d-5910-4f89-a0ec-3231468ee26e" />
+&nbsp;
+
+### Tunnel
+<img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/e6c79840-3cf0-45bb-b9c4-92cae988033b" />
+
+<img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/0a2c3b3d-5910-4f89-a0ec-3231468ee26e" />
+
+1. **`detect_signcombine.py`**
+   → 터널 표지판 감지
+2. **`/tunnel/cmd_vel`로 MUX 전환**  
+3. **`detect_stop_tunnel.py`**  
+   → Twist `linear.x = 0.0`, `angular.z = 0.0` 설정  
+   → 로봇 실제 정지 수행
 
 &nbsp;
 
@@ -390,59 +412,115 @@ construction sign 보면 construction sign           반대편으로 틀어서 �
 
 ## 6. 💻 코드 실행 방법
 
-### 🤖 Robot Control Node
-- 코드: [`main_robot_control`](./Rokey_Pharmacy-main/rokey_project/rokey_project/main_robot_control.py)
+### 🚗 전체 시뮬레이션 실행 (Auto)
+- 코드: [`turtlebot3_autorace_2020.launch.py`](https://github.com/ROBOTIS-GIT/turtlebot3_simulations/blob/master/turtlebot3_gazebo/launch/turtlebot3_autorace_2020.launch.py)
 
 ```bash
-ros2 run rokey_project main_robot_control
+ros2 launch turtlebot3_gazebo turtlebot3_autorace_2020.launch.py
 ```
 
-### 👁️ Vision Node (Realsense)
-- 코드: [`main_vision_realsense`](./Rokey_Pharmacy-main/rokey_project/rokey_project/main_vision_realsense.py)
+### 🎥 내부 카메라 캘리브레이션 (Intrinsic)
+- 코드: [`intrinsic_camera_calibration.launch.py`](https://github.com/ROBOTIS-GIT/turtlebot3_autorace_camera/blob/master/launch/intrinsic_camera_calibration.launch.py)
 
 ```bash
-ros2 run rokey_project main_vision_realsense
+ros2 launch turtlebot3_autorace_camera intrinsic_camera_calibration.launch.py
+```
+
+### 📸 외부 카메라 캘리브레이션 (Extrinsic)
+- 코드: [`extrinsic_camera_calibration.launch.py`](https://github.com/ROBOTIS-GIT/turtlebot3_autorace_camera/blob/master/launch/extrinsic_camera_calibration.launch.py)
+
+```bash
+ros2 launch turtlebot3_autorace_camera extrinsic_camera_calibration.launch.py
+```
+
+### 🔀 MUX 제어 노드
+- 코드: [`mux_node`](https://github.com/ros-teleop/teleop_twist_mux)
+
+```bash
+ros2 run cmd_vel_mux mux_node
+```
+
+### 🛣️ 차선 감지 (Detect Lane)
+- 코드: [`detect_lane.launch.py`](https://github.com/ROBOTIS-GIT/turtlebot3_autorace_detect/blob/master/launch/detect_lane.launch.py)
+
+```bash
+ros2 launch turtlebot3_autorace_detect detect_lane.launch.py
+```
+
+### 🧭 차선 제어 (Control Lane)
+- 코드: [`control_lane.launch.py`](https://github.com/ROBOTIS-GIT/turtlebot3_autorace_mission/blob/master/launch/control_lane.launch.py)
+
+```bash
+ros2 launch turtlebot3_autorace_mission control_lane.launch.py
+```
+
+---
+
+### 🚦 신호등 감지 (Detect Traffic Light)
+- 코드: [`detect_traffic_light.launch.py`](https://github.com/ROBOTIS-GIT/turtlebot3_autorace_detect/blob/master/launch/detect_traffic_light.launch.py)
+
+```bash
+ros2 launch turtlebot3_autorace_detect detect_traffic_light.launch.py
+```
+
+### 🛑 신호등 제어 (Control Traffic Light)
+- 코드: [`control_traffic_light.launch.py`](https://github.com/ROBOTIS-GIT/turtlebot3_autorace_mission/blob/master/launch/control_traffic_light.launch.py)
+
+```bash
+ros2 launch turtlebot3_autorace_mission control_traffic_light.launch.py
+```
+
+### 🪧 표지판 감지 (Detect Sign Combine)
+- 코드: [`detect_sign_combine.launch.py`](https://github.com/ROBOTIS-GIT/turtlebot3_autorace_detect/blob/master/launch/detect_sign_combine.launch.py)
+
+```bash
+ros2 launch turtlebot3_autorace_detect detect_sign_combine.launch.py
+```
+
+### 🅿️ 주차 감지 및 제어 (Detect Parking)
+- 코드: [`detect_parking.launch.py`](https://github.com/ROBOTIS-GIT/turtlebot3_autorace_detect/blob/master/launch/detect_parking.launch.py)
+
+```bash
+ros2 launch turtlebot3_autorace_detect detect_parking.launch.py
+```
+
+### 🌉 터널 정지 감지 (Detect Stop Tunnel)
+- 코드: [`detect_stop_tunnel.launch.py`](https://github.com/ROBOTIS-GIT/turtlebot3_autorace_detect/blob/master/launch/detect_stop_tunnel.launch.py)
+
+```bash
+ros2 launch turtlebot3_autorace_detect detect_stop_tunnel.launch.py
 ```
 
 &nbsp;
 ## 7. 📷 시연 영상 / 이미지
 > https://youtu.be/qz6bvLREzT4
 
-> https://youtu.be/YkDVQ3afCMA
-
 &nbsp;
 ## 8. 🌟 기대 효과
+### 📌 프로젝트 기대 효과
 
-- 약물 사고 예방 → 사망 사고, 부작용 최소화
-- 약사의 단순 반복업무 감소 → 핵심 업무 집중 가능
-- 복약 실수 줄이고, 독립적인 복약 가능
-- 팬데믹 등 상황에서 비대면 복약 시스템 활용 가능
+| 구분             | 효과                        | 설명                                             |
+|------------------|-----------------------------|--------------------------------------------------|
+| 기술 실현        | 라스트마일 자율주행         | 공공/상업 주차장, 물류창고 등에 적용 가능        |
+| 사용자 편의성 향상 | 주차 스트레스 감소          | 주차 공간 탐색/충돌 위험 감소                    |
+| 🅿️ 공간 효율성   | 주차 최적화                  | 경차/전기차 등 분류 주차로 공간 활용 극대화      |
+| 사회적 포용성    | 교통 약자 고려              | 장애인·고령자 차량 자동 인식 및 근접 배치        |
+| 지속가능성       | 전기차 충전 구역 자동 배정  | 탄소중립 도시교통 인프라와 연결 가능             |
 
-### ⚙️ 활용 방안
+### 📌 사업화 가능성
 
-- 약국 내 조제 공정
-- 의료 어시스턴트(수술, 차트)
-- 창고 정리
-- 선반/서랍 정리
-
+| 구분 | 사업 모델                 | 주요 고객                      | 수익 구조                         | 핵심 가치                    |
+|------|--------------------------|-------------------------------|----------------------------------|-----------------------------|
+| B2G  | 공공 주차장 자동화 시스템 | 지자체, 공공기관               | 시스템 납품 + 유지보수 계약       | 스마트시티 인프라 연계       |
+| B2B  | 대형 시설 자율주차 솔루션 | 쇼핑몰, 물류센터, 아파트 단지 | 솔루션 판매 + 구독형 유지비       | 운영 효율화 + 고객 경험 개선 |
+| B2C  | 개인용 스마트 주차 로봇   | 고급 EV 사용자, 스마트홈 고객 | 로봇 판매 + 앱 서비스 구독        | 개인화된 편의성과 자동화     |
 
 ### ⚠️ 잘한 점 / 아쉬운 점
 
-- **약 모양 다양함 → segmentation으로 위치, 자세 추정 → 로봇 세밀하고 정밀한 조정 가능**
-- **다양한 센서 이용 → voice, vision, sleep → 저전력 구동**
-- **각 detection에 맞는 모델 사용 → ai 판단 → 증상, 전문 의약품, 일반의약품 다양**
+- **신호등 감지, 주차, 신호탐지를 활용한 네비게이션 등등 목표 기능들을 대부분 구현함.**
 
 🧩 **한계 및 개선점**:
-- 그리퍼의 크기가 약을 집기에 커서 겹쳐있는 약이나, 붙어있는 약을 집을 때 정확히 집지 못하는 점
-- 기능 추가 필요 (증상 → 처방전 → 약 종류 자동 판단 등 통합 처리)
-- 예외처리 부족 (약 부족 상황에서 대체 약 제안, 의약품 추가 구매 유도 등)
-
-
-### 🤝 팀 완성도 평가 및 느낀 점
-
-- **백종하**: 팀원과의 활발한 소통이 중요함을 느낌. 커뮤니케이션이 순조롭게 진행됨  
-- **정서윤**: 계획과 실제 운영에서 발생한 문제를 유연하게 대응하며 실무형 문제 해결 역량 체감  
-- **정민섭**: 협력 과정에서 중요한 점은 팀원 간 보완과 통합이었음을 실감함  
-- **서형원**: 협동 로봇 기능을 잘 활용하고 추가 의견을 반영하며 팀워크 완성도 향상
+- SIFT 기반 특징점 추출 -> Yolo 기반 신호등, 표지판 인식
+- SLAM 기반 내비게이션 기술 자동화
 
 &nbsp;
