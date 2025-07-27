@@ -561,3 +561,6 @@ ros2 launch turtlebot3_autorace_detect detect_stop_tunnel.launch.py
 - SLAM 기반 내비게이션 기술 자동화
 
 &nbsp;
+
+## 팀원
+정서윤 나승원 이동기 홍진규
