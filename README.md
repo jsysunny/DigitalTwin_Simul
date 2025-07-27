@@ -427,7 +427,7 @@ https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/
 ## 5. 💻 코드 실행 방법
 
 ### 🚗 전체 시뮬레이션 실행 (Auto)
-- 코드: [`turtlebot3_autorace_2020.launch.py`](https://github.com/ROBOTIS-GIT/turtlebot3_simulations/blob/master/turtlebot3_gazebo/launch/turtlebot3_autorace_2020.launch.py)
+- 코드: [`turtlebot3_autorace_2020.launch.py`](./turtlebot3_ws/src/turtlebot3_simulations/turtlebot3_gazebo/worlds/turtlebot3_autorace_2020.launch.py)
 
 ```bash
 ros2 launch turtlebot3_gazebo turtlebot3_autorace_2020.launch.py
@@ -437,7 +437,7 @@ ros2 launch turtlebot3_gazebo turtlebot3_autorace_2020.launch.py
 &nbsp;
 
 ### 🎥 내부 카메라 캘리브레이션 (Intrinsic)
-- 코드: [`intrinsic_camera_calibration.launch.py`](https://github.com/ROBOTIS-GIT/turtlebot3_autorace_camera/blob/master/launch/intrinsic_camera_calibration.launch.py)
+- 코드: [`intrinsic_camera_calibration.launch.py`](./turtlebot3_ws/src/turtlebot3_autorace/turtlebot3_autorace_camera/launch/intrinsic_camera_calibration.launch.py)
 
 ```bash
 ros2 launch turtlebot3_autorace_camera intrinsic_camera_calibration.launch.py
@@ -446,7 +446,7 @@ ros2 launch turtlebot3_autorace_camera intrinsic_camera_calibration.launch.py
 &nbsp;
 
 ### 📸 외부 카메라 캘리브레이션 (Extrinsic)
-- 코드: [`extrinsic_camera_calibration.launch.py`](https://github.com/ROBOTIS-GIT/turtlebot3_autorace_camera/blob/master/launch/extrinsic_camera_calibration.launch.py)
+- 코드: [`extrinsic_camera_calibration.launch.py`](./turtlebot3_ws/src/turtlebot3_autorace/turtlebot3_autorace_camera/launch/extrinsic_camera_calibration.launch.py)
 
 ```bash
 ros2 launch turtlebot3_autorace_camera extrinsic_camera_calibration.launch.py
@@ -455,7 +455,7 @@ ros2 launch turtlebot3_autorace_camera extrinsic_camera_calibration.launch.py
 &nbsp;
 
 ### 🔀 MUX 제어 노드
-- 코드: [`mux_node`](https://github.com/ros-teleop/teleop_twist_mux)
+- 코드: [`mux_node`](./turtlebot3_ws/src/cmd_vel_mux/cmd_vel_mux/mux_node.py)
 
 ```bash
 ros2 run cmd_vel_mux mux_node
@@ -464,7 +464,7 @@ ros2 run cmd_vel_mux mux_node
 &nbsp;
 
 ### 🛣️ 차선 감지 (Detect Lane)
-- 코드: [`detect_lane.launch.py`](https://github.com/ROBOTIS-GIT/turtlebot3_autorace_detect/blob/master/launch/detect_lane.launch.py)
+- 코드: [`detect_lane.launch.py`](./turtlebot3_ws/src/turtlebot3_autorace/turtlebot3_autorace_detect/launch/detect_lane.launch.py)
 
 ```bash
 ros2 launch turtlebot3_autorace_detect detect_lane.launch.py
