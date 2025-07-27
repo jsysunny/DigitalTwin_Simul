@@ -427,10 +427,10 @@ https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/
 ## 5. 💻 코드 실행 방법
 
 ### 🚗 전체 시뮬레이션 실행 (Auto)
-- 코드: [`turtlebot3_autorace_2020.launch.py`](./turtlebot3_ws/src/turtlebot3_simulations/turtlebot3_gazebo/worlds/turtlebot3_autorace_2020.world.py)
+- 코드: [`turtlebot3_autorace_2020.launch.py`](./turtlebot3_ws/src/turtlebot3_simulations/turtlebot3_gazebo/worlds/turtlebot3_autorace_2020.world)
 
 ```bash
-ros2 launch turtlebot3_gazebo turtlebot3_autorace_2020.world.py
+ros2 launch turtlebot3_gazebo turtlebot3_autorace_2020.world
 ```
 
 
