@@ -500,10 +500,10 @@ ros2 launch turtlebot3_autorace_mission control_traffic_light.launch.py
 &nbsp;
 
 ### 🪧 표지판 감지 (Detect Sign Combine)
-- 코드: [`detect_sign_combine.launch.py`](./turtlebot3_ws/src/turtlebot3_autorace/turtlebot3_autorace_detect/launch/detect_sign_combine.launch.py)
+- 코드: [`detect_sign_combine.launch.py`](./turtlebot3_ws/src/turtlebot3_autorace/turtlebot3_autorace_detect/launch/detect_signcombine.launch.py)
 
 ```bash
-ros2 launch turtlebot3_autorace_detect detect_sign_combine.launch.py
+ros2 launch turtlebot3_autorace_detect detect_signcombine.launch.py
 ```
 
 &nbsp;
